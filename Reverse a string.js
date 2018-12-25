@@ -19,3 +19,12 @@ function reverseString(str) {
 }
 
 reverseString("hello");
+
+
+//更简洁版
+function reverseString(str) {
+    // 请把你的代码写在这里
+    return str && str.split('').reverse().join('');
+}
+
+reverseString("hello");

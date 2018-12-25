@@ -17,3 +17,15 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
+
+
+//利用正则表达式
+
+function titleCase(str) {
+
+    return str && str.replace(/(^|[\s])(\w)(\S*)/g, function(match, c1, c2, c3){
+
+        return c1 + c2.toUpperCase() + c3.toLowerCase()
+
+    })
+

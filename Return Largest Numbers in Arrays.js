@@ -9,8 +9,9 @@
 function largestOfFour(arr) {
   // 请把你的代码写在这里
   var newS= new Array();
-  var largest = 0;
+
   for(i=0; i<arr.length;i++){
+      var largest = 0;
    for(j=0; j<arr[i].length; j++){
      if(arr[i][j] > largest)
        largest = arr[i][j];
