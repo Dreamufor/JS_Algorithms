@@ -16,16 +16,27 @@
 
 
 function rot13(str) { // LBH QVQ VG!
-                      // 请把你的代码写在这里
-    var newString = [];
-    var n = 0;
-    var s;
-    for(i=0; i<str.length; i++){
-        // if(str.charCodeAt(i) == )
+  // 请把你的代码写在这里
+  var newString = [];
+  var n = 0;
+  var s = [];
+  for(i=0; i<str.length; i++){
+    if((str.charCodeAt(i)>=34) && (str.charCodeAt(i)<=59))
+      {
         n =(str.charCodeAt(i) + 13);
-        newString.push(n);
-    }
-    return str;
+      }
+      else
+      {
+        n = str.charCodeAt(i);
+      }
+    newString.push(n);
+
+  }
+  for(j = 0; j < newString.length; j++){
+    var m  = String.fromCharCode(newString[j]);
+    s.push(m);
+  }
+  return s.join("");
 }
 
 rot13("SERR PBQR PNZC");  // 你可以修改这一行来测试你的代码
