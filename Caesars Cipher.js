@@ -21,9 +21,13 @@ function rot13(str) { // LBH QVQ VG!
   var n = 0;
   var s = [];
   for(i=0; i<str.length; i++){
-    if((str.charCodeAt(i)>=34) && (str.charCodeAt(i)<=59))
+    if((str.charCodeAt(i)>=65) && (str.charCodeAt(i)< 78))
       {
         n =(str.charCodeAt(i) + 13);
+      }
+      else if((str.charCodeAt(i) >= 78) && (str.charCodeAt(i)<=90))
+      {
+        n =(str.charCodeAt(i) + 13) - 26;
       }
       else
       {
